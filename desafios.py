@@ -54,6 +54,10 @@ def verificar_tag_valida(tag):
 
 
 def gerar_relatorio_final(funcoes_concluidas):
+    print("Gerando relatório final...")
+    print(f"Funções implementadas: {', '.join(funcoes_concluidas)}")
+    return f"Desafio concluído! {len(funcoes_concluidas)} funções implementadas com sucesso."
+
     """
     Recebe uma lista com os nomes das funções implementadas
     e retorna uma mensagem final do desafio.
@@ -72,4 +76,5 @@ print(listar_comandos_git_basicos())
 print(criar_mensagem_commit("listar_comandos_git_basicos"))
 print(verificar_tag_valida("v1.0"))
 print(verificar_tag_valida("1.0"))
+print(gerar_relatorio_final(["mostrar_mensagem_inicial", "listar_comandos_git_basicos"]))
 
