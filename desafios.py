@@ -13,6 +13,9 @@ Seu objetivo é:
 Boa sorte e bons commits! 🚀
 """
 
+import re
+
+
 def mostrar_mensagem_inicial():
     print("Bem-vindo ao Desafio de Git!")
 
@@ -40,14 +43,21 @@ def criar_mensagem_commit(funcao_nome):
 
 
 def verificar_tag_valida(tag):
+     
+
     """
     Verifica se uma tag está no formato 'vX.Y' (ex: v1.0, v2.1).
     Retorna True se o formato for válido, caso contrário False.
     """
-    pass
+    padrao = r"^v\d+\.\d+$"
+    return re.match(padrao, tag) is not None
 
 
 def gerar_relatorio_final(funcoes_concluidas):
+    print("Gerando relatório final...")
+    print(f"Funções implementadas: {', '.join(funcoes_concluidas)}")
+    return f"Desafio concluído! {len(funcoes_concluidas)} funções implementadas com sucesso."
+
     """
     Recebe uma lista com os nomes das funções implementadas
     e retorna uma mensagem final do desafio.
@@ -64,5 +74,7 @@ mostrar_mensagem_inicial()
 listar_comandos_git_basicos()
 print(listar_comandos_git_basicos())
 print(criar_mensagem_commit("listar_comandos_git_basicos"))
-
+print(verificar_tag_valida("v1.0"))
+print(verificar_tag_valida("1.0"))
+print(gerar_relatorio_final(["mostrar_mensagem_inicial", "listar_comandos_git_basicos"]))
 
