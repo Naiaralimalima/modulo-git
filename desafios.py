@@ -36,7 +36,7 @@ def criar_mensagem_commit(funcao_nome):
     criar_mensagem_commit("listar_comandos_git_basicos") ->
     "Implementa função listar_comandos_git_basicos"
     """
-    pass
+    return f"Implementa função {funcao_nome}"
 
 
 def verificar_tag_valida(tag):
@@ -63,4 +63,6 @@ def gerar_relatorio_final(funcoes_concluidas):
 mostrar_mensagem_inicial()
 listar_comandos_git_basicos()
 print(listar_comandos_git_basicos())
+print(criar_mensagem_commit("listar_comandos_git_basicos"))
+
 
