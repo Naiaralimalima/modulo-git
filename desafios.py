@@ -14,19 +14,19 @@ Boa sorte e bons commits! 🚀
 """
 
 def mostrar_mensagem_inicial():
+    print("Bem-vindo ao Desafio de Git!")
+
+    
     """
     Exibe uma mensagem de boas-vindas ao desafio.
     Retorno esperado: string com a mensagem "Bem-vindo ao Desafio de Git!"
     """
-    pass
+    
 
 def listar_comandos_git_basicos():
-    """
-    Retorna uma lista com os principais comandos básicos do Git.
-    Exemplo de saída:
-    ["git init", "git add", "git commit", "git status", "git push"]
-    """
-    pass
+    print("Listando comandos básicos do Git...")
+    return ["git init", "git add", "git commit", "git status", "git push"]
+       
 
 
 def criar_mensagem_commit(funcao_nome):
@@ -36,7 +36,7 @@ def criar_mensagem_commit(funcao_nome):
     criar_mensagem_commit("listar_comandos_git_basicos") ->
     "Implementa função listar_comandos_git_basicos"
     """
-    pass
+    return f"Implementa função {funcao_nome}"
 
 
 def verificar_tag_valida(tag):
@@ -58,3 +58,11 @@ def gerar_relatorio_final(funcoes_concluidas):
     "Desafio concluído! 2 funções implementadas com sucesso."
     """
     pass
+
+
+mostrar_mensagem_inicial()
+listar_comandos_git_basicos()
+print(listar_comandos_git_basicos())
+print(criar_mensagem_commit("listar_comandos_git_basicos"))
+
+
